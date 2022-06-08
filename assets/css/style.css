@@ -6,19 +6,13 @@
 }
 
 :root {
-  --main-color: #FBFBFC;
-  --main-color-alt: #1787e0;
-  --second-color: #fafafa;
-  --section-background: #ececec;
-  --main-transition: 0.3s;
-  --main-padding-top: 100px;
-  --main-padding-bottom: 100px;
-  --grey-100: #e4e9f0;
-  --grey-200: #cfd7e3;
-  --grey-300: #b5c0cd;
+  --section-background: #FBFBFC;
+  --grey-alt: #EBEBEB;
+  --blue-alt: #026BB0;
+  --blue-dark: #2680EB;
   --grey-800: #3e4e63;
   --grid-gap: 10px;
-  --day-label-size: 0;
+  --day-label-size: 0px;
 }
 
 html {
@@ -39,34 +33,6 @@ ul {
   list-style: none;
   margin: 0;
   padding: 0
-}
-
-section:is(.articles,
-  .gallery,
-  .features,
-  .testimonials,
-  .team-member,
-  .services,
-  .our-skills,
-  .work-steps,
-  .events,
-  .pricing,
-  .videos) {
-  padding-top: var(--main-padding-top);
-  padding-bottom: var(--main-padding-bottom);
-  position: relative;
-}
-
-
-:is(.gallery,
-  .features,
-  .testimonials,
-  .team-member,
-  .services,
-  .pricing) .container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 40px;
 }
 
 .container {
@@ -103,7 +69,7 @@ section:is(.articles,
 header {
   position: relative;
   z-index: 1;
-  background: var(--main-color);
+  background: var(--section-background);
   padding: 20px;
 }
 
@@ -137,11 +103,11 @@ header .header__info .logo__link .logo__text {
 }
 
 .header__nav .nav .nav__list .nav__item a {
-  padding: 5px 15px;
+  padding: 10px 15px;
   background: #fff;
-  border: 1px solid #EBEBEB;
+  border: 1px solid var(--grey-alt);
   border-radius: 10px;
-  color: #2680EB;
+  color: var(--blue-dark);
 }
 
 .header__nav .nav .nav__list .nav__item a.bell__icon::before {
@@ -232,17 +198,17 @@ header .header__info .logo__link .logo__text {
 
 .childs__info__tabs .tabs__list .tabs__item.active .tabs__link p {
   font-weight: bold;
-  color: #026BB0;
+  color: var(--blue-alt);
 }
 
 .childs__info__tabs .tabs__list .btn__child__item {
-  border-color: #026BB0;
+  border-color: var(--blue-alt);
   padding: 15px 35px;
   cursor: pointer;
 }
 
 .btn-child {
-  color: #026BB0;
+  color: var(--blue-alt);
 }
 
 /* end child tabs Rules */
@@ -279,7 +245,7 @@ header .header__info .logo__link .logo__text {
 .content .card .card__body {
   background: #fff;
   padding: 20px 0;
-  border: 1px solid #eee;
+  border: 1px solid var(--grey-alt);
   border-radius: 30px;
 }
 
@@ -398,7 +364,6 @@ header .header__info .logo__link .logo__text {
   position: relative;
   grid-column-gap: var(--grid-gap);
   grid-row-gap: var(--grid-gap);
-  /* border-top: solid 1px var(--grey-200); */
   background-color: #fff;
   padding: 20px;
 }
@@ -451,11 +416,11 @@ header .header__info .logo__link .logo__text {
 
 .attendence #next-month-selector,
 .attendence #previous-month-selector {
-  border: 1px solid #EBEBEB;
-  padding: 5px 15px;
+  border: 1px solid var(--grey-alt);
+  padding: 10px 15px;
   background: #fff;
-  color: #026BB0;
-  border-radius: 10px;
+  color: var(--blue-alt);
+  border-radius: 6px;
 }
 
 .attendence #present-month-selector {
@@ -487,7 +452,7 @@ header .header__info .logo__link .logo__text {
 .gradebook__header,
 .gradebook__item {
   background-color: #fff;
-  border: 1px solid #EBEBEB;
+  border: 1px solid var(--grey-alt);
   border-radius: 20px;
   padding: 0 20px;
   position: relative;
@@ -507,7 +472,7 @@ header .header__info .logo__link .logo__text {
 
 .gradebook__header__item,
 .gradebook__item__info {
-  border-bottom: 1px solid #EBEBEB;
+  border-bottom: 1px solid var(--grey-alt);
 }
 
 .gradebook__header__item:last-child,
@@ -537,7 +502,7 @@ header .header__info .logo__link .logo__text {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: 1px solid #EBEBEB;
+  border: 1px solid var(--grey-alt);
 }
 
 .gradebook__footer__text {
@@ -565,7 +530,7 @@ header .header__info .logo__link .logo__text {
 .footer {
   background-color: #fff;
   padding: 15px 0 10px;
-  border-top: 1px solid #EBEBEB;
+  border-top: 1px solid var(--grey-alt);
 }
 
 .footer .footer_items {
@@ -587,6 +552,12 @@ header .header__info .logo__link .logo__text {
 
 /* end footer Rules */
 /* start reponsive */
+@media (max-width:1024px) {
+  .card.gradebook .card__body .gradebook__lists {
+    grid-template-columns: repeat(auto-fill, minmax(132px, 1fr));
+  }
+}
+
 @media (max-width:844px) {
   .childs__info__tabs .tabs__list .btn__child__item {
     padding: 15px;
@@ -662,7 +633,7 @@ header .header__info .logo__link .logo__text {
   /*    gap:10px;*/
   /*}*/
   .header__nav .nav .nav__list .nav__item a {
-    padding: 5px 12px;
+    padding: 10px 12px;
   }
 
   .header__nav .nav .nav__list .nav__item a.arrow__icon::before {
@@ -683,7 +654,7 @@ header .header__info .logo__link .logo__text {
   .gradebook__header,
   .gradebook__item {
     background-color: #fff;
-    border: 1px solid #EBEBEB;
+    border: 1px solid var(--grey-alt);
     border-radius: 20px;
     padding: 20px 10px;
     position: relative;
