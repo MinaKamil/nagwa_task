@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nagwa</title>
+  <link rel="stylesheet" href=".assets/css/normalize.css">
+  <!-- Main Css -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <!-- Font-Awesome -->
+  <link rel="stylesheet" href="assets/css/all.css">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container">
+      <div class="header__info">
+        <div class="header__logo">
+          <a href="index.html" class="logo__link">
+            <img src="assets/img/Bitmap.png" alt="logo">
+            <p class="logo__text">Step to Success scho</p>
+          </a>
+        </div>
+        <div class="header__nav">
+          <nav class="nav">
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a href="index.html" class="nav__link bell__icon"><i class="far fa-bell"></i></a>
+              </li>
+              <li class="nav__item">
+                <a href="index.html" class="nav__link arrow__icon"><i class="far fa-user"></i></a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- Header -->
+  <!-- child tabs -->
+
+  <section class="childs">
+    <div class="container">
+      <div class="childs__info">
+        <div class="childs__info__img" id="maged" style="display: none;">
+          <img src="assets/img/maged_lg.png" alt="child">
+          <h3>Maged</h3>
+        </div>
+        <div class="childs__info__img" id="adam">
+          <img src="assets/img/adem_lg.png" alt="child">
+          <h3>Adam</h3>
+        </div>
+        <div class="childs__info__img" id="nabil" style="display: none;">
+          <img src="assets/img/nabil_lg.png" alt="child">
+          <h3>Nabil</h3>
+        </div>
+        <div class="childs__info__tabs">
+          <ul class="tabs__list">
+            <li class="tabs__item" onclick="child(event,'maged')">
+              <button class="tabs__link">
+                <img src="assets/img/maged.png" alt="maged_image">
+                <p>Maged</p>
+              </button>
+            </li>
+            <li class="tabs__item active" onclick="child(event,'adam')">
+              <button class="tabs__link">
+                <img src="assets/img/adam_sm.png" alt="adam_image">
+                <p>Adam</p>
+              </button>
+            </li>
+            <li class="tabs__item" onclick="child(event,'nabil')">
+              <button class="tabs__link">
+                <img src="assets/img/nabil.png" alt="nabil_image">
+                <p>Nabil</p>
+              </button>
+            </li>
+            <li class="tabs__item btn__child__item">
+              <a href="index.html" class="tabs__link btn-child">
+                <i class="fas fa-user-plus"></i>
+                <span>Add Child</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+  </section>
+  <!-- child tabs -->
+  <section class="content">
+    <div class="container">
+      <!-- statistics -->
+      <div class="card statistics">
+        <div class="card__header">
+          <h3>Statistics</h3>
+        </div>
+        <div class="card__body">
+          <div class="statistics__list">
+            <div class="statistics__item">
+              <div class="statistics__item__circle">
+                <svg viewBox="0 0 36 36" class="circular-chart dark_move">
+                  <path class="circle-bg" d="M18 2.0845
+          a 15.9155 15.9155 0 0 1 0 31.831
+          a 15.9155 15.9155 0 0 1 0 -31.831" />
+                  <path class="circle" stroke-dasharray="80, 100" d="M18 2.0845
+          a 15.9155 15.9155 0 0 1 0 31.831
+          a 15.9155 15.9155 0 0 1 0 -31.831" />
+                  <text x="18" y="20.35" class="percentage">80%</text>
+                </svg>
+              </div>
+              <div class="statistics__item__info">
+                <h3>32 out of 40</h3>
+                <p>Solved Homework</p>
+              </div>
+            </div>
+            <div class="statistics__item">
+              <div class="statistics__item__circle">
+                <svg viewBox="0 0 36 36" class="circular-chart green">
+                  <path class="circle-bg" d="M18 2.0845
+          a 15.9155 15.9155 0 0 1 0 31.831
+          a 15.9155 15.9155 0 0 1 0 -31.831" />
+                  <path class="circle" stroke-dasharray="50, 100" d="M18 2.0845
+          a 15.9155 15.9155 0 0 1 0 31.831
+          a 15.9155 15.9155 0 0 1 0 -31.831" />
+                  <text x="18" y="20.35" class="percentage">50%</text>
+                </svg>
+              </div>
+              <div class="statistics__item__info">
+                <h3>45 out of 90</h3>
+                <p>Attended Days</p>
+              </div>
+            </div>
+            <div class="statistics__item">
+              <div class="statistics__item__circle">
+                <svg viewBox="0 0 36 36" class="circular-chart light_move">
+                  <path class="circle-bg" d="M18 2.0845
+          a 15.9155 15.9155 0 0 1 0 31.831
+          a 15.9155 15.9155 0 0 1 0 -31.831" />
+                  <path class="circle" stroke-dasharray="93, 100" d="M18 2.0845
+          a 15.9155 15.9155 0 0 1 0 31.831
+          a 15.9155 15.9155 0 0 1 0 -31.831" />
+                  <text x="18" y="20.35" class="percentage">50%</text>
+                </svg>
+              </div>
+              <div class="statistics__item__info">
+                <h3>8 out of 11</h3>
+                <p>Attended Days</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- statistics -->
+      <!-- attendence -->
+      <div class="card attendence">
+        <div class="card__header">
+          <h3>Attendence</h3>
+          <div class="calendar-month-header-selectors">
+            <span id="previous-month-selector">
+              <i class="fas fa-chevron-left"></i></span> <span id="present-month-selector">March.2022
+            </span>
+            <span id="next-month-selector"><i class="fas fa-chevron-right"></i></span>
+          </div>
+        </div>
+        <div class="card__body">
+          <div class="calendar-month">
+
+            <ol id="days-of-week" class="day-of-week">
+              <li>Sun</li>
+              <li>Mon</li>
+              <li>Tue</li>
+              <li>Wed</li>
+              <li>Thu</li>
+              <li>Fri</li>
+              <li>Sat</li>
+            </ol>
+
+            <ol id="calendar-days" class="days-grid">
+              <li class="calendar-day yellow" style="grid-column-start: 3;">
+                <span>1</span>
+              </li>
+              <li class="calendar-day yellow">
+                <span>2</span>
+              </li>
+              <li class="calendar-day yellow">
+                <span>3</span>
+              </li>
+              <li class="calendar-day gray">
+                <span>4</span>
+              </li>
+              <li class="calendar-day gray">
+                <span>5</span>
+              </li>
+              <li class="calendar-day yellow">
+                <span>6</span>
+              </li>
+              <li class="calendar-day yellow">
+                <span>7</span>
+              </li>
+              <li class="calendar-day yellow">
+                <span>8</span>
+              </li>
+              <li class="calendar-day yellow">
+                <span>9</span>
+              </li>
+              <li class="calendar-day yellow">
+                <span>10</span>
+              </li>
+              <li class="calendar-day gray">
+                <span>11</span>
+              </li>
+              <li class="calendar-day gray">
+                <span>12</span>
+              </li>
+              <li class="calendar-day red">
+                <span>13</span>
+              </li>
+              <li class="calendar-day yellow">
+                <span>14</span>
+              </li>
+              <li class="calendar-day yellow">
+                <span>15</span>
+              </li>
+              <li class="calendar-day yellow">
+                <span>16</span>
+              </li>
+              <li class="calendar-day yellow">
+                <span>17</span>
+              </li>
+              <li class="calendar-day gray">
+                <span>18</span>
+              </li>
+              <li class="calendar-day gray">
+                <span>19</span>
+              </li>
+              <li class="calendar-day red">
+                <span>20</span>
+              </li>
+              <li class="calendar-day yellow">
+                <span>21</span>
+              </li>
+              <li class="calendar-day red">
+                <span>22</span>
+              </li>
+              <li class="calendar-day yellow">
+                <span>23</span>
+              </li>
+              <li class="calendar-day yellow">
+                <span>24</span>
+              </li>
+              <li class="calendar-day gray">
+                <span>25</span>
+              </li>
+              <li class="calendar-day gray">
+                <span>26</span>
+              </li>
+              <li class="calendar-day red">
+                <span>27</span>
+              </li>
+              <li class="calendar-day yellow">
+                <span>28</span>
+              </li>
+              <li class="calendar-day yellow">
+                <span>29</span>
+              </li>
+              <li class="calendar-day yellow">
+                <span>30</span>
+              </li>
+              <li class="calendar-day yellow">
+                <span>31</span>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+      <!-- attendence -->
+      <!-- gradebook -->
+      <div class="card gradebook">
+        <div class="card__header">
+          <h3>Gradebook</h3>
+        </div>
+        <div class="card__body">
+          <div class="gradebook__lists">
+            <div class="gradebook__header">
+              <div class="gradebook__header__item">
+                <p class="gradebook__header__item__title">Math</>
+              </div>
+              <div class="gradebook__header__item">
+                <p class="gradebook__header__item__title">Geology</p>
+              </div>
+              <div class="gradebook__header__item">
+                <p class="gradebook__header__item__title">Sociology</p>
+              </div>
+              <div class="gradebook__header__item">
+                <p class="gradebook__header__item__title">Chemistry</p>
+              </div>
+              <div class="gradebook__header__item">
+                <p class="gradebook__header__item__title">Statics</p>
+              </div>
+              <div class="gradebook__header__item">
+                <p class="gradebook__header__item__title">Science</p>
+              </div>
+              <div class="gradebook__header__item">
+                <p class="gradebook__header__item__title">Arabic</p>
+              </div>
+            </div>
+            <div class="gradebook__item">
+              <p class="gradebook__item__title">1st Semester</p>
+              <div class="gradebook__item__info">
+                <p>42/50</p>
+              </div>
+              <div class="gradebook__item__info">
+                <p>80/100</p>
+              </div>
+              <div class="gradebook__item__info">
+                <p>50/50</p>
+              </div>
+              <div class="gradebook__item__info">
+                <p>98/100</p>
+              </div>
+              <div class="gradebook__item__info">
+                <p><span class="text-danger">30</span>/100</p>
+              </div>
+              <div class="gradebook__item__info">
+                <p><span class="text-danger">20</span>/50</p>
+              </div>
+              <div class="gradebook__item__info">
+                <p>80/100</p>
+              </div>
+            </div>
+            <div class="gradebook__item">
+              <p class="gradebook__item__title">2nd Semester</p>
+              <div class="gradebook__item__info">
+                <p>40/50</p>
+              </div>
+              <div class="gradebook__item__info">
+                <p>92/100</p>
+              </div>
+              <div class="gradebook__item__info">
+                <p>43/50</p>
+              </div>
+              <div class="gradebook__item__info">
+                <p>99/100</p>
+              </div>
+              <div class="gradebook__item__info">
+                <p>72/100</p>
+              </div>
+              <div class="gradebook__item__info">
+                <p><span class="text-danger">19</span>/50</p>
+              </div>
+              <div class="gradebook__item__info">
+                <p>92/100</p>
+              </div>
+            </div>
+            <div class="gradebook__item">
+              <p class="gradebook__item__title">Year Pass Limit</p>
+              <div class="gradebook__item__info">
+                <p>50</p>
+              </div>
+              <div class="gradebook__item__info">
+                <p>100</p>
+              </div>
+              <div class="gradebook__item__info">
+                <p>50</p>
+              </div>
+              <div class="gradebook__item__info">
+                <p>100</p>
+              </div>
+              <div class="gradebook__item__info">
+                <p>100</p>
+              </div>
+              <div class="gradebook__item__info">
+                <p>50</p>
+              </div>
+              <div class="gradebook__item__info">
+                <p>100</p>
+              </div>
+            </div>
+            <div class="gradebook__item">
+              <p class="gradebook__item__title">Total Marks</p>
+              <div class="gradebook__item__info">
+                <p>82/100</p>
+              </div>
+              <div class="gradebook__item__info">
+                <p>172/200</p>
+              </div>
+              <div class="gradebook__item__info">
+                <p>93/100</p>
+              </div>
+              <div class="gradebook__item__info">
+                <p>197/200</p>
+              </div>
+              <div class="gradebook__item__info">
+                <p>102/200</p>
+              </div>
+              <div class="gradebook__item__info">
+                <p><span class="text-danger">39</span>/100</p>
+              </div>
+              <div class="gradebook__item__info">
+                <p>172/200</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="gradebook__footer">
+          <p class="gradebook__footer__text">Total Mark</p>
+          <h3 class="gradebook__footer__total"><span>3785</span>/4000</h3>
+        </div>
+      </div>
+      <!-- gradebook -->
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer_items">
+        <img src="assets/img/logo.svg" alt="logo">
+        <p>Copyright © 2022 Nag</p>
+      </div>
+    </div>
+  </footer>
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

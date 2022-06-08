@@ -1,0 +1,725 @@
+/* start global Rules */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:root {
+  --main-color: #FBFBFC;
+  --main-color-alt: #1787e0;
+  --second-color: #fafafa;
+  --section-background: #ececec;
+  --main-transition: 0.3s;
+  --main-padding-top: 100px;
+  --main-padding-bottom: 100px;
+  --grey-100: #e4e9f0;
+  --grey-200: #cfd7e3;
+  --grey-300: #b5c0cd;
+  --grey-800: #3e4e63;
+  --grid-gap: 10px;
+  --day-label-size: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Noto Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0
+}
+
+section:is(.articles,
+  .gallery,
+  .features,
+  .testimonials,
+  .team-member,
+  .services,
+  .our-skills,
+  .work-steps,
+  .events,
+  .pricing,
+  .videos) {
+  padding-top: var(--main-padding-top);
+  padding-bottom: var(--main-padding-bottom);
+  position: relative;
+}
+
+
+:is(.gallery,
+  .features,
+  .testimonials,
+  .team-member,
+  .services,
+  .pricing) .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 40px;
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Small */
+@media (min-width:768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+/* Medium */
+@media (min-width:992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+/* Large */
+@media (min-width:1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+/* end global Rules */
+
+/* start header Rules */
+header {
+  position: relative;
+  z-index: 1;
+  background: var(--main-color);
+  padding: 20px;
+}
+
+header .header__info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .header__info .logo__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+header .header__info .logo__link .logo__text {
+  color: #000;
+}
+
+.header__nav .nav .nav__list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.header__nav .nav .nav__list .nav__item {
+  position: relative;
+}
+
+.header__nav .nav .nav__list .nav__item a {
+  padding: 5px 15px;
+  background: #fff;
+  border: 1px solid #EBEBEB;
+  border-radius: 10px;
+  color: #2680EB;
+}
+
+.header__nav .nav .nav__list .nav__item a.bell__icon::before {
+  content: '';
+  width: 7px;
+  height: 7px;
+  background: #FF3C3C;
+  border-radius: 50%;
+  position: absolute;
+  right: 12px;
+  top: calc(50% - 9px);
+}
+
+.header__nav .nav .nav__list .nav__item a.arrow__icon::before {
+  content: '';
+  background: transparent;
+  position: absolute;
+  right: -27px;
+  top: calc(50% - 4px);
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid #969696;
+  border-radius: 5px;
+}
+
+/* end header Rules */
+/* start child tabs Rules */
+.childs {
+  background-color: #fff;
+  border-top: 1px solid #F3F3F3;
+  border-bottom: 1px solid #F3F3F3;
+  padding: 20px;
+}
+
+.childs__info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.childs__info__img {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 20px;
+}
+
+.childs__info__tabs {
+  flex-grow: 1;
+}
+
+.childs__info__tabs .tabs__list {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 10px;
+}
+
+.childs__info__tabs .tabs__list .tabs__item,
+.btn__child__item {
+  border: 1px solid #eee;
+  padding: 10px 25px 10px 15px;
+  border-radius: 15px;
+}
+
+.childs__info__tabs .tabs__list .tabs__item.active {
+  background: #E5F0F7;
+  color: #fff;
+}
+
+.childs__info__tabs .tabs__list .tabs__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.childs__info__tabs .tabs__list .tabs__link {
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.childs__info__tabs .tabs__list .tabs__link p {
+  padding: 0;
+  margin: 0;
+}
+
+.childs__info__tabs .tabs__list .tabs__item.active .tabs__link p {
+  font-weight: bold;
+  color: #026BB0;
+}
+
+.childs__info__tabs .tabs__list .btn__child__item {
+  border-color: #026BB0;
+  padding: 15px 35px;
+  cursor: pointer;
+}
+
+.btn-child {
+  color: #026BB0;
+}
+
+/* end child tabs Rules */
+
+/* start content Rules */
+.content {
+  background-color: #FBFBFC;
+  padding: 20px;
+}
+
+.content .card {
+  margin: 20px 0;
+}
+
+.card__header {
+  position: relative;
+}
+
+.card__header h3 {
+  padding: 0 15px;
+}
+
+.card__header h3::before {
+  content: '';
+  width: 8px;
+  height: 25px;
+  background: #AE7129;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 10px;
+}
+
+.content .card .card__body {
+  background: #fff;
+  padding: 20px 0;
+  border: 1px solid #eee;
+  border-radius: 30px;
+}
+
+.content .card .card__body .statistics__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 3px;
+}
+
+
+.statistics__item__info {
+  text-align: center;
+}
+
+.statistics__item__info h3 {
+  margin: 0;
+}
+
+.statistics__item__info p {
+  margin: 0;
+}
+
+.statistics__item__circle .circular-chart {
+  display: block;
+  margin: 10px auto;
+  max-width: 25%;
+  max-height: 250px;
+  position: relative;
+}
+
+.statistics__item__circle .circle-bg {
+  fill: none;
+  stroke: #eee;
+  stroke-width: 1;
+}
+
+.statistics__item__circle .circle {
+  fill: none;
+  stroke-width: 1;
+  stroke-linecap: round;
+  animation: progress 1s ease-out forwards;
+}
+
+@keyframes progress {
+  0% {
+    stroke-dasharray: 0 100;
+  }
+}
+
+.circular-chart.dark_move .circle {
+  stroke: #4A3274;
+}
+
+.circular-chart.green .circle {
+  stroke: #739500;
+}
+
+.circular-chart.light_move .circle {
+  stroke: #950086;
+}
+
+.statistics__item__circle .percentage {
+  fill: #666;
+  font-family: sans-serif;
+  font-size: 0.4em;
+  text-anchor: middle;
+}
+
+/* start attendence Rules*/
+.attendence .card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.attendence .card__header h3::before {
+  top: 16px;
+}
+
+.attendence ol,
+.attendence li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.attendence .calendar-month {
+  position: relative;
+  background-color: transparent;
+  border: 0;
+}
+
+.attendence .calendar-month-header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+  padding: 10px;
+}
+
+.attendence .day-of-week,
+.attendence .days-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.attendence .day-of-week {
+  color: var(--grey-800);
+  font-size: 18px;
+  background-color: #fff;
+  padding-bottom: 5px;
+  padding-top: 10px;
+}
+
+.attendence .days-grid {
+  height: 100%;
+  position: relative;
+  grid-column-gap: var(--grid-gap);
+  grid-row-gap: var(--grid-gap);
+  /* border-top: solid 1px var(--grey-200); */
+  background-color: #fff;
+  padding: 20px;
+}
+
+.attendence .calendar-day {
+  position: relative;
+  min-height: 60px;
+  font-size: 16px;
+  /* background-color: #000; */
+  color: #000;
+  padding: 0;
+  margin: 0;
+  border-radius: 7px;
+}
+
+.calendar-day.yellow {
+  background-color: #F1F8E7;
+}
+
+.calendar-day.gray {
+  background-color: #EAEAEA;
+}
+
+.calendar-day.red {
+  background-color: #FDE8E8;
+}
+
+.attendence .calendar-day>span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 50%;
+  top: 50%;
+  width: var(--day-label-size);
+  height: var(--day-label-size);
+  color: #333;
+}
+
+.attendence .day-of-week>* {
+  text-align: center;
+  padding-right: 0;
+  color: #8B8B8B;
+  font-size: 15px;
+}
+
+.attendence .calendar-month-header-selectors #present-month-selector {
+  color: #333;
+}
+
+.attendence #next-month-selector,
+.attendence #previous-month-selector {
+  border: 1px solid #EBEBEB;
+  padding: 5px 15px;
+  background: #fff;
+  color: #026BB0;
+  border-radius: 10px;
+}
+
+.attendence #present-month-selector {
+  padding: 0 20px;
+
+}
+
+/* end attendence  Rules*/
+/* start gradebook  Rules*/
+.card.gradebook .card__body {
+  background-color: transparent;
+  border: 0;
+  border-radius: 0;
+  padding: 20px 0 5px;
+}
+
+.card.gradebook .card__body .gradebook__lists {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+  gap: 3px;
+}
+
+.gradebook__header {
+  grid-column: 1/ span 2;
+}
+
+.gradebook__item {}
+
+.gradebook__header,
+.gradebook__item {
+  background-color: #fff;
+  border: 1px solid #EBEBEB;
+  border-radius: 20px;
+  padding: 0 20px;
+  position: relative;
+}
+
+.gradebook__item .gradebook__item__title {
+  margin: 0;
+  position: absolute;
+  top: -45px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #3333338c;
+  font-size: 18px;
+  text-align: center;
+  width: 100%;
+}
+
+.gradebook__header__item,
+.gradebook__item__info {
+  border-bottom: 1px solid #EBEBEB;
+}
+
+.gradebook__header__item:last-child,
+.gradebook__item__info:last-child {
+  border-bottom: 0;
+}
+
+.gradebook__header__item .gradebook__header__item__title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+}
+
+.gradebook__item__info p {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.gradebook .text-danger {
+  color: #FF0000;
+}
+
+.gradebook__footer {
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #EBEBEB;
+}
+
+.gradebook__footer__text {
+  font-weight: bold;
+  color: #333;
+  font-size: 18px;
+  margin: 0;
+}
+
+.gradebook__footer__total {
+  margin: 0;
+  color: #AFAFAF;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.gradebook__footer__total span {
+  font-weight: bold;
+  color: #000;
+}
+
+/* end gradebook  Rules*/
+/* end content Rules */
+/* start footer Rules */
+.footer {
+  background-color: #fff;
+  padding: 15px 0 10px;
+  border-top: 1px solid #EBEBEB;
+}
+
+.footer .footer_items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer .footer_items img {
+  width: 70px;
+  height: auto;
+  margin-top: 10px;
+}
+
+.footer .footer_items p {
+  margin: 0;
+  font-size: 12px;
+}
+
+/* end footer Rules */
+/* start reponsive */
+@media (max-width:812px) {
+  .childs__info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .childs__info__img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .childs__info__img h3 {
+    margin: 0;
+  }
+
+  .childs__info__tabs .tabs__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .childs__info__tabs .tabs__list .tabs__item {
+    padding: 10px 8px 10px;
+  }
+
+  .childs__info__tabs .tabs__list .btn__child__item {
+    padding: 15px 10px;
+    border-radius: 12px;
+  }
+
+  .childs__info__tabs .tabs__list .btn__child__item span {
+    display: none;
+  }
+
+  .attendence .calendar-day {
+    min-height: 30px;
+  }
+
+  .attendence .days-grid {
+    padding: 10px;
+  }
+
+  .header {
+    padding: 10px;
+  }
+
+  .header__nav .nav .nav__list {
+    gap: 10px;
+  }
+
+  /*.header .header__info{*/
+  /*    justify-content: center;*/
+  /*    gap:10px;*/
+  /*}*/
+  .header__nav .nav .nav__list .nav__item a {
+    padding: 5px 12px;
+  }
+
+  .header__nav .nav .nav__list .nav__item a.arrow__icon::before {
+    right: -18px;
+  }
+
+  .attendence #present-month-selector {
+    padding: 0;
+  }
+
+  .card.gradebook .card__body .gradebook__lists {
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: 0;
+    gap: 5px;
+  }
+
+  .gradebook__header,
+  .gradebook__item {
+    background-color: #fff;
+    border: 1px solid #EBEBEB;
+    border-radius: 20px;
+    padding: 20px 10px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .gradebook__header {
+    grid-column: auto;
+  }
+
+  .gradebook__item .gradebook__item__title {
+    margin: 0;
+    position: absolute;
+    top: 9px;
+    left: 52%;
+    transform: translateX(-50%);
+    color: #3333338;
+    font-size: 12px;
+    text-align: left;
+    width: 100%;
+  }
+
+  .gradebook__header__item .gradebook__header__item__title {
+    margin: 0;
+    font-size: 11px;
+  }
+
+  .gradebook__header__item,
+  .gradebook__item__info {
+    border-bottom: 0;
+  }
+
+  .gradebook__item__info p {
+    text-align: center;
+    margin: 10px 0 0;
+    font-size: 10px;
+    font-weight: bold;
+  }
+
+  .content {
+    padding: 0;
+  }
+
+  .gradebook__footer__text,
+  .gradebook__footer__total {
+    font-size: 13px;
+  }
+}
+
+/* end reponsive */
