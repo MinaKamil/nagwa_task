@@ -587,7 +587,21 @@ header .header__info .logo__link .logo__text {
 
 /* end footer Rules */
 /* start reponsive */
-@media (max-width:812px) {
+@media (max-width:844px) {
+  .childs__info__tabs .tabs__list .btn__child__item {
+    padding: 15px;
+  }
+
+  .gradebook__item .gradebook__item__title {
+    font-size: 16px;
+  }
+
+  .card.gradebook .card__body .gradebook__lists {
+    grid-template-columns: repeat(auto-fill, minmax(117px, 1fr));
+  }
+}
+
+@media (max-width:768px) {
   .childs__info {
     display: flex;
     justify-content: center;
