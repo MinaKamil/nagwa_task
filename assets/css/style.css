@@ -599,6 +599,10 @@ header .header__info .logo__link .logo__text {
   .card.gradebook .card__body .gradebook__lists {
     grid-template-columns: repeat(auto-fill, minmax(117px, 1fr));
   }
+
+  .childs__info__tabs .tabs__list .btn__child__item span {
+    display: none;
+  }
 }
 
 @media (max-width:768px) {
@@ -635,10 +639,6 @@ header .header__info .logo__link .logo__text {
   .childs__info__tabs .tabs__list .btn__child__item {
     padding: 15px 10px;
     border-radius: 12px;
-  }
-
-  .childs__info__tabs .tabs__list .btn__child__item span {
-    display: none;
   }
 
   .attendence .calendar-day {
@@ -703,7 +703,7 @@ header .header__info .logo__link .logo__text {
     top: 9px;
     left: 52%;
     transform: translateX(-50%);
-    color: #3333338;
+    color: #333333;
     font-size: 12px;
     text-align: left;
     width: 100%;
