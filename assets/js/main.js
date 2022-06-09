@@ -11,3 +11,17 @@ function child(e, childName) {
   document.getElementById(childName).style.display = "flex";
   e.currentTarget.className += " active";
 }
+$(document).ready(function () {
+  $(".btn_semester__one").click(function () {
+    $(this).addClass('active');
+    $('.btn_semester__two').removeClass('active');
+    $('.semester__one').addClass('active').removeClass('none');
+    $('.semester__two').addClass('none').removeClass('active');
+  });
+  $(".btn_semester__two").click(function () {
+    $(this).addClass('active');
+    $('.btn_semester__one').removeClass('active');
+    $('.semester__two').addClass('active').removeClass('none');
+    $('.semester__one').addClass('none').removeClass('active');
+  });
+});
