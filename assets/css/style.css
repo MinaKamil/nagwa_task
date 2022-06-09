@@ -707,4 +707,29 @@ header .header__info .logo__link .logo__text {
   }
 }
 
+@media (max-width:320px) {
+  header .header__info .logo__link .logo__text {
+    font-size: 12px;
+  }
+
+  .childs__info__tabs .tabs__list .tabs__item {
+    padding: 5px 0;
+  }
+
+  .childs__info__tabs .tabs__list .btn__child__item {
+    border: 0;
+  }
+
+  .gradebook__header__item .gradebook__header__item__title {
+    font-size: 10px;
+  }
+
+  .gradebook__header,
+  .gradebook__item {
+    background-color: transparent;
+    border: 0;
+    padding: 20px 0;
+  }
+}
+
 /* end reponsive */
