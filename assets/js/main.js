@@ -1,27 +1,29 @@
 function child(e, childName) {
   var i;
-  var x = document.getElementsByClassName("childs__info__img");
-  var active = document.getElementsByClassName("tabs__item");
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";
+  var childs__img = document.getElementsByClassName("childs__info__img");
+  var activeChild = document.getElementsByClassName("tabs__item");
+
+  for (i = 0; i < childs__img.length; i++) {
+    childs__img[i].style.display = "none";
   }
-  for (i = 0; i < active.length; i++) {
-    active[i].className = active[i].className.replace(" active", "");
+  for (i = 0; i < activeChild.length; i++) {
+    activeChild[i].className = activeChild[i].className.replace(" active", "");
   }
   document.getElementById(childName).style.display = "flex";
   e.currentTarget.className += " active";
 }
-$(document).ready(function () {
-  $(".btn_semester__one").click(function () {
-    $(this).addClass('active');
-    $('.btn_semester__two').removeClass('active');
-    $('.semester__one').addClass('active').removeClass('none');
-    $('.semester__two').addClass('none').removeClass('active');
-  });
-  $(".btn_semester__two").click(function () {
-    $(this).addClass('active');
-    $('.btn_semester__one').removeClass('active');
-    $('.semester__two').addClass('active').removeClass('none');
-    $('.semester__one').addClass('none').removeClass('active');
-  });
-});
+function samsterFun(e, semester) {
+  var i;
+  var semester__info = document.getElementsByClassName("semester__info");
+  var activeSemester = document.getElementsByClassName("btn_semester");
+
+  for (i = 0; i < semester__info.length; i++) {
+    // Check if the media query is true
+    semester__info[i].style.display = "none";
+  }
+  for (i = 0; i < activeSemester.length; i++) {
+    activeSemester[i].className = activeSemester[i].className.replace(" active", "");
+  }
+  document.getElementById(semester).style.display = "block";
+  e.currentTarget.className += " active";
+}

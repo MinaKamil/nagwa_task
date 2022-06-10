@@ -528,10 +528,8 @@ header .header__info .logo__link .logo__text {
   display: none;
 }
 
-.semester__two.active,
-.semester__one.active,
-.semester__two.none,
-.semester__one.none {
+#semester__two,
+#semester__one {
   display: block;
 }
 
@@ -724,10 +722,22 @@ header .header__info .logo__link .logo__text {
   }
 }
 
+@media (min-width:481px) {
+
+  #semester__two,
+  #semester__one {
+    display: block !important;
+  }
+}
+
 @media (max-width:480px) {
   .card.gradebook .card__body .gradebook__lists {
     grid-template-columns: repeat(auto-fill, minmax(87px, 1fr));
     text-align: center;
+  }
+
+  #semester__two {
+    display: none;
   }
 }
 
@@ -786,15 +796,6 @@ header .header__info .logo__link .logo__text {
   .childs__info__tabs .tabs__list .btn__child__item {
     border: 0;
   }
-
-
-  /*
-  .gradebook__header,
-  .gradebook__item {
-    background-color: transparent;
-    border: 0;
-    padding: 20px 0;
-  } */
 
   .calendar-month-header-selectors {
     display: flex;
